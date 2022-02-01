@@ -10,4 +10,8 @@ export class AppComponent {
 
   persons: string[] = ['Donald','Mickey','Teacher'];
 
+  onPersonCreate(name: string) {
+    this.persons.push(name);
+  }
+
 }
