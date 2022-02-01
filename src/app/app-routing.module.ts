@@ -6,7 +6,7 @@ import { PersonInputComponent } from "./person-input/person-input.component";
 import { PersonsComponent } from "./persons/persons.component";
 
 const routes: Routes = [
-  { path: '', component: PersonsComponent, canActivate: [AuthGuard] },
+  { path: '', component: PersonsComponent },
   { path: 'input', component: PersonInputComponent },
   { path: 'login', component: LoginComponent}
 ];
