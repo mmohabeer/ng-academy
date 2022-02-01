@@ -7,12 +7,14 @@ import { PersonsComponent } from './persons/persons.component';
 import { PersonInputComponent } from './person-input/person-input.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonsComponent,
-    PersonInputComponent
+    PersonInputComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule, HttpClientModule

@@ -1,5 +1,7 @@
 <a routerLink="/">Persons </a> |
-<a routerLink="input">Add</a>
+<a routerLink="input">Add</a> |
+<a *ngIf="!(isLogin | async)" routerLink="login">Login</a>
+<a *ngIf="(isLogin | async)" (click)="onLogout()">Logout</a>
 <hr>
 <router-outlet></router-outlet>
 
