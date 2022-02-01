@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { PersonsService } from '../persons/persons.service';
 
 @Component({
@@ -10,7 +11,8 @@ export class PersonInputComponent implements OnInit {
 
   enteredPersonName = '';
 
-  constructor(private personsService: PersonsService) { }
+  constructor(private personsService: PersonsService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +21,7 @@ export class PersonInputComponent implements OnInit {
     console.log('Created a person: ' + this.enteredPersonName);
     this.personsService.addPerson(this.enteredPersonName);
     this.enteredPersonName = '';
+    this.router.navigate(["/"]);
   }
 
 }
